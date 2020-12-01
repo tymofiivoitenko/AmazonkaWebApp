@@ -22,9 +22,4 @@ public class UserController {
 
         return "users/userlist";
     }
-
-    @RequestMapping("/")
-    public String home(){
-        return "Hello World!";
-    }
 }

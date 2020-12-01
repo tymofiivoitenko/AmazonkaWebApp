@@ -26,7 +26,5 @@ public class BootStrapData implements CommandLineRunner {
         egorUser.setLastName("Priemniy");
 
         userRepository.save(egorUser);
-
-        System.out.println(userRepository.count());
     }
 }
