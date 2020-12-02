@@ -12,10 +12,20 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
-    private String firstName;
-    private String lastName;
+    private String userName;
+    private String password;
+    private String role;
+    private boolean active;
 
     public User() {
+    }
+
+    public User(Long id, String userName, String password, String role, boolean active) {
+        Id = id;
+        this.userName = userName;
+        this.password = password;
+        this.role = role;
+        this.active = active;
     }
 
     public Long getId() {
@@ -26,20 +36,36 @@ public class User {
         Id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPassword() {
+        return password;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override
@@ -59,8 +85,9 @@ public class User {
     public String toString() {
         return "User{" +
                 "Id=" + Id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", role='" + role + '\'' +
+                ", active=" + active +
                 '}';
     }
 }

@@ -8,6 +8,16 @@ public class CommonController {
 
     @RequestMapping("/")
     public String home(){
-        return ("<h1> You are welcome!</h1>");
+        return ("<h1> You are welcome. This page is accessible even for unauthorized users!</h1>");
+    }
+
+    @RequestMapping("/user")
+    public String user(){
+        return ("<h1> You are welcome, User!</h1>");
+    }
+
+    @RequestMapping("/admin")
+    public String admin(){
+        return ("<h1> You are welcome, Admin!</h1>");
     }
 }

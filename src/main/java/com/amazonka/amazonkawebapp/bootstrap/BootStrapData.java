@@ -16,14 +16,18 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         User timaAdmin = new User();
-        timaAdmin.setFirstName("Tima");
-        timaAdmin.setLastName("Voitenko");
+        timaAdmin.setUserName("Tima");
+        timaAdmin.setRole("ADMIN");
+        timaAdmin.setPassword("q");
+        timaAdmin.setActive(true);
 
         userRepository.save(timaAdmin);
 
         User egorUser = new User();
-        egorUser.setFirstName("Egor");
-        egorUser.setLastName("Priemniy");
+        egorUser.setUserName("Egor");
+        egorUser.setRole("USER");
+        egorUser.setPassword("q");
+        egorUser.setActive(true);
 
         userRepository.save(egorUser);
     }
