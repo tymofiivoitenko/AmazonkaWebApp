@@ -17,7 +17,7 @@ public class AmazonkawebappApplication {
 
     @RequestMapping("/hello")
     public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-        System.out.println("loh you are here");
+        System.out.println("Now you are here");
         return String.format("Hello %s!", name);
     }
 }
